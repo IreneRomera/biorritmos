@@ -1,7 +1,4 @@
-# biorritmos
-Consulta de biorritmos físico, emocional e intelectual
-
-# Biorritmos y Luna
+# Biorritmos exactos y luna
 
 ## Ejecutar
 ```bash
@@ -9,8 +6,9 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Incluye:
-- selector de fecha de nacimiento
-- consulta del día actual y fechas futuras
-- gráfico de evolución no sinusoidal
-- calendario lunar minimalista
+## Principio de cálculo
+- días vividos desde el nacimiento
+- división por 23, 28 y 33
+- parte decimal para ubicar la fase del ciclo
+- porcentaje teórico calculado con seno clásico
+- curva visual opcional aproximada, sin alterar los porcentajes teóricos
