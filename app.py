@@ -133,14 +133,6 @@ for col, key, label in [(colB,'fisico_pct','Físico'), (colC,'emocional_pct','Em
 
 st.markdown(f"<div class='chip'>{PHASE_EMOJI[today['luna']]} {today['luna']}</div>", unsafe_allow_html=True)
 
-st.subheader('Ciclos calculados')
-calc_df = pd.DataFrame([
-    {'Ritmo':'Físico','Cálculo':f"{int(today['dias_vividos'])} / 23",'Valor':f"{today['fisico_cociente']:.3f}",'Parte decimal':f"{today['fisico_fraccion']:.3f}",'Día de ciclo':f"{today['fisico_dia_ciclo']:.1f}",'% teórico':f"{today['fisico_pct']:.1f}%"},
-    {'Ritmo':'Emocional','Cálculo':f"{int(today['dias_vividos'])} / 28",'Valor':f"{today['emocional_cociente']:.3f}",'Parte decimal':f"{today['emocional_fraccion']:.3f}",'Día de ciclo':f"{today['emocional_dia_ciclo']:.1f}",'% teórico':f"{today['emocional_pct']:.1f}%"},
-    {'Ritmo':'Intelectual','Cálculo':f"{int(today['dias_vividos'])} / 33",'Valor':f"{today['intelectual_cociente']:.3f}",'Parte decimal':f"{today['intelectual_fraccion']:.3f}",'Día de ciclo':f"{today['intelectual_dia_ciclo']:.1f}",'% teórico':f"{today['intelectual_pct']:.1f}%"},
-])
-st.dataframe(calc_df, use_container_width=True, hide_index=True)
-
 st.subheader('Gráfico de evolución')
 fig = go.Figure()
 if curve_mode == 'Teórica exacta':
